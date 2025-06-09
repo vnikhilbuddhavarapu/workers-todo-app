@@ -29,11 +29,7 @@
       "id": "93e87a30ece340afaaa1c110e1a20844"
     }
   	],
-	/**
-	 * Smart Placement
-	 * Docs: https://developers.cloudflare.com/workers/configuration/smart-placement/#smart-placement
-	 */
-	// "placement": { "mode": "smart" },
+	"placement": { "mode": "smart" },
 
 	/**
 	 * Bindings

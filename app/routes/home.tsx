@@ -17,7 +17,7 @@ export default function Home() {
   // Check if user is logged in and fetch todos
   useEffect(() => {
     const checkLogin = async () => {
-      console.log("🔍 Checking auth status via /api/me");
+      //console.log("🔍 Checking auth status via /api/me");
       try {
         const res = await fetch("/api/me", {
           credentials: "include",
@@ -31,10 +31,10 @@ export default function Home() {
         }
 
         const data = await res.json();
-        console.log("📬 /api/me response:", data);
+        //console.log("📬 /api/me response:", data);
 
         if (data?.user?.id) {
-          console.log("✅ Logged in as:", data.user.firstname);
+          //console.log("✅ Logged in as:", data.user.firstname);
           setIsLoggedIn(true);
 
           const todosRes = await fetch("/api/todos", {
@@ -59,9 +59,9 @@ export default function Home() {
   }, []);
 
   const handleAddTodo = async () => {
-    console.log("📥 Add Todo triggered with input:", newTodo);
+    //console.log("📥 Add Todo triggered with input:", newTodo);
     if (!newTodo.trim()) {
-      console.log("❌ Empty input, aborting.");
+      //console.log("❌ Empty input, aborting.");
       return;
     }
 
@@ -86,7 +86,7 @@ export default function Home() {
         }
 
         const added = await res.json();
-        console.log("✅ Todo added:", added);
+        //console.log("✅ Todo added:", added);
         if (added?.todo?.id) {
           setTodos((prev) => [added.todo, ...prev]);
         } else {
@@ -148,7 +148,7 @@ export default function Home() {
 
       <ul className="space-y-2">
         {todos.map((todo, index) => {
-        console.log("🔑 Rendering todo:", todo); // Debug: see if `todo.id` exists
+        //console.log("🔑 Rendering todo:", todo); // Debug: see if `todo.id` exists
 
         const safeKey = todo.id ?? `todo-${index}`; // fallback in case id is undefined
 

@@ -23,14 +23,14 @@ export default function Navbar() {
   }, []);
 
   const handleSignOut = async () => {
-    console.log("🚪 Signing out...");
+    //console.log("🚪 Signing out...");
     const res = await fetch("/api/logout", {
       method: "POST",
       credentials: "include",
     });
 
     if (res.ok) {
-      console.log("✅ Logged out successfully");
+      //console.log("✅ Logged out successfully");
       setUser(null);
       window.location.href = "/";
     } else {
