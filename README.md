@@ -1,79 +1,67 @@
-# Welcome to React Router!
+📝 ToDo App
 
-A modern, production-ready template for building full-stack React applications using React Router.
+This is a full-stack ToDo List App built entirely on the Cloudflare Developer Platform, featuring persistent user authentication, real-time stateful interactions, and a React-based UI. The entire app can be deployed globally using Cloudflare Workers.
 
-## Features
+Tech Stack
 
-- 🚀 Server-side rendering
-- ⚡️ Hot Module Replacement (HMR)
-- 📦 Asset bundling and optimization
-- 🔄 Data loading and mutations
-- 🔒 TypeScript by default
-- 🎉 TailwindCSS for styling
-- 📖 [React Router docs](https://reactrouter.com/)
+Frontend: React with Tailwind CSS and Shadcn UI
+Backend: Cloudflare Workers using the Hono framework
+Authentication: JWT-based with secure cookies and KV for session management
+Database: Cloudflare D1 (SQLite-compatible SQL)
+Session Store: Cloudflare KV
 
-## Getting Started
+Features
 
-### Installation
+User Sign Up / Sign In with email and password
+JWT-authenticated sessions stored in KV
+Create, list, and delete ToDo items linked to each user
+Checkbox-based UI for completing (and deleting) ToDos
+Responsive UI with persistent Navbar and Footer
+Google Fonts integration
+Deployable via a single button to any Cloudflare account
 
-Install the dependencies:
 
-```bash
+One-Click Deploy
+
+You can deploy this app to your own Cloudflare account using the button below:
+
+[![Deploy to Cloudflare](https://deploy.workers.cloudflare.com/button)](https://deploy.workers.cloudflare.com/?url=https://github.com/vnikhilbuddhavarapu/workers-todo-app)
+
+
+
+# Install deps
 npm install
-```
 
-### Development
-
-Start the development server with HMR:
-
-```bash
+# Dev mode
 npm run dev
-```
 
-Your application will be available at `http://localhost:5173`.
-
-## Previewing the Production Build
-
-Preview the production build locally:
-
-```bash
-npm run preview
-```
-
-## Building for Production
-
-Create a production build:
-
-```bash
+# Build
 npm run build
-```
 
-## Deployment
-
-Deployment is done using the Wrangler CLI.
-
-To build and deploy directly to production:
-
-```sh
+# Deploy to Cloudflare
 npm run deploy
-```
 
-To deploy a preview URL:
 
-```sh
-npx wrangler versions upload
-```
+Environment Requirements
 
-You can then promote a version to production after verification or roll it out progressively.
+Node.js (for local development)
+Wrangler CLI
+Public GitHub account (for Deploy to Cloudflare button)
 
-```sh
-npx wrangler versions deploy
-```
+Feedback / Contributions
 
-## Styling
+PRs welcome! File issues or improvements via GitHub.
 
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever CSS framework you prefer.
 
----
+Resources
 
-Built with ❤️ using React Router.
+Cloudflare Workers Docs
+Cloudflare D1 Docs
+Hono Framework
+Shadcn UI
+Wrangler CLI
+
+License 
+
+MIT
+
